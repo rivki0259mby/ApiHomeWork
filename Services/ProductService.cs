@@ -40,8 +40,8 @@ namespace WebApplication1.Services
 
         public async Task<List<ProductDto>> GetAllProduct() 
         {
-            var a = await repository.GetAllProduct();
-            return a.Select(p => new ProductDto
+            var product = await repository.GetAllProduct();
+            return product.Select(p => new ProductDto
             {
                 Name=p.Name,
                 Price=p.Price,
@@ -64,6 +64,6 @@ namespace WebApplication1.Services
         public int CreateProductWithPro(CreateProductDto product)
         {
             return repository.CreateProductWithPro(product);
-                }
+        }
     }
 }

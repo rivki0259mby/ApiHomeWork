@@ -171,35 +171,11 @@ namespace WebApplication1.Repositories
             return Id;
         }
 
-        public int CreateProductWithTra(CreateProductDto product)
-        {
-            var outputParam = new SqlParameter
-            {
-                ParameterName = "@Id",
-                SqlDbType = System.Data.SqlDbType.Int,
-                Direction = System.Data.ParameterDirection.Output
-            };
-
-            var parameters = new[]
-            {
-            new SqlParameter("@name", product.Name),
-            new SqlParameter("@price", product.Price),
-            new SqlParameter("@categoryId", product.CategoryId),
-
-            outputParam
-         };
-
-
-            context.Database.ExecuteSqlRaw(
-            "EXEC AddProductPro @name, @price,@categoryId, @Id OUTPUT",
-            parameters);
-
-            // Get the output value
-            int Id = (int)outputParam.Value;
-
-
-            return Id;
-        }
+        //public int CreateProductWithTra(CreateProductDto product)
+        //{
+            
+         
+        //}
 
 
 
