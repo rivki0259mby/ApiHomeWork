@@ -22,8 +22,9 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllProduct() { 
-            return Ok(_productService.GetAllProduct());
+        public async Task<IActionResult> GetAllProduct() {
+            var products = await _productService.GetAllProduct();
+            return Ok(products);
         
         }
 

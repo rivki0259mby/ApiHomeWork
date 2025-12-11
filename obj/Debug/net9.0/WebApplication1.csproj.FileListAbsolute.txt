@@ -834,3 +834,4 @@ D:\api\2\WebApplication1\WebApplication1\obj\Debug\net9.0\WebAppli.7D14BD69.Up2D
 D:\api\2\WebApplication1\WebApplication1\obj\Debug\net9.0\WebApplication1.genruntimeconfig.cache
 D:\api\2\WebApplication1\WebApplication1\obj\Debug\net9.0\ref\WebApplication1.dll
 D:\api\2\WebApplication1\WebApplication1\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\api\2\WebApplication1\WebApplication1\obj\Debug\net9.0\WebApplication1.sourcelink.json

@@ -7,7 +7,7 @@ namespace WebApplication1.Dto
         public string Name { get; set; } = null!;
 
         public string Price { get; set; } = null!;
-        public bool IsDeleted { get; set; } 
+        public bool IsDeleted { get; set; } = false; 
     }
 
     public class ProductsCategoriesDto

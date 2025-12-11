@@ -21,13 +21,11 @@ namespace WebApplication1.Repositories
             return product;
         }
 
-        public List<ProductDto> GetAllProduct()
+        public async Task<List<Product>>GetAllProduct()
         {
-            return context.Products.Select(p=> new ProductDto
-            {
-                Name = p.Name,
-                Price = p.Price
-            }).ToList();
+           var products = await context.Products
+                .ToListAsync();
+            return products;
         }
     
 

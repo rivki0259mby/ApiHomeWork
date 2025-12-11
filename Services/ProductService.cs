@@ -38,9 +38,17 @@ namespace WebApplication1.Services
             return repository.DeleteProduct(productId);
         }
 
-        public List<ProductDto> GetAllProduct() 
+        public async Task<List<ProductDto>> GetAllProduct() 
         {
-            return repository.GetAllProduct();
+            var a = await repository.GetAllProduct();
+            return a.Select(p => new ProductDto
+            {
+                Name=p.Name,
+                Price=p.Price,
+                IsDeleted=p.IsDeleted,
+
+            }).ToList();
+
         }
 
         public List<ProductEverithing> GetEverything()
